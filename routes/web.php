@@ -36,6 +36,15 @@ Route::get('/cart', function () {
 });
 
 
+
+
+Route::group(['middleware' => ['auth']], function () {
+
+	Route::get('/dashboard', function () {
+    return view('dashboard/home');
+});
+
+});
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
