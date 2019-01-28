@@ -15,8 +15,11 @@ class Admin
      */
     public function handle($request, Closure $next)
     {
-        dd('here');
-
-        return $next($request);
+        if(auth()->user()){
+            if(auth()->user()->isAdmin == 1){
+                return $next($request);
+            }
+        }
+        return redirect('home')->with('error','You have not admin access');
     }
 }

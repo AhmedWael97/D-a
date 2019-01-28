@@ -857,12 +857,12 @@ label.price:before {
 {	
 	padding-top:100px;
 	font-size: 75px;
-	letter-spacing: 14px;
 }
 .desc-padding
 {
-	margin-top: -25px;
-    padding-left: 8px;
+	  margin-top: -25px;
+    padding-left: 134px;
+    padding-right: 134px;
 }
 .Footeritem
 {
